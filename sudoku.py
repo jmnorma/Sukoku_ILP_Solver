@@ -126,7 +126,7 @@ def textFileParse( fileName ):
 def main(): 
     ## Create a 2D List of integers 
     ## Blanks are filed with Zeros 
-    board = textFileParse("puzzle6(medium).txt")
+    board = textFileParse("puzzles/puzzle6(medium).txt")
 
     SS = SudokuSolver()
     SS.addBoard(board)
