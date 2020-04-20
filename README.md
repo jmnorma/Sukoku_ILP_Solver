@@ -6,9 +6,15 @@
 **Names**: Josh Norman and Delaney Higgins
 ___
 
-**Requirements**: Python 2.7.1 and Pulp 
+**Requirements**: Python 2.7.1, Kivy and Pulp 
     
+    # Install PuLP 
         pip install pulp
+
+    # Install of Kivy (Mac OS)
+        python -m pip install kivy
+        python -m pip install ffpyplayer
+
 
 Resources: 
 
@@ -41,9 +47,11 @@ constraints. These values with represent a value hit(1) or miss(0).
 ___
 ## Terminal Usage 
 
+**Only requires PuLp Library**
 - Create a .txt file to resemble the 9x9 sudoku board you wish to solve 
     -  Replace each blank on the board with a zero
     -  *Make sure there are no extra spaces after each row*
+![alt text](data/textfile.png)
 
 - Update the main function within sudoku.py  to use the text file you just created
 
@@ -51,3 +59,27 @@ ___
 - Run using the following command 
 
         python sudoku.py 
+
+___
+## GUI Usages
+   **Requires both Kivy and PuLp** 
+
+- **Start Application
+    -  Run using the following command
+      
+      python sudokuUI.py 
+
+![alt text](data/landingPage.png)
+
+- **Board Input** 
+    - Clicks the boxes you wish to insert a number into
+    - Or load a text file by typing in the file name and pressing import 
+
+![alt text](data/fileInput.png)
+![alt text](data/fileInputCompletion.png)
+
+- **Solve** 
+    - Click the solve button for a solution using the lienar program formulation 
+    - If you want to test another board please press "Clear"
+
+![alt text](data/fileInputCompletion.png)

@@ -1,0 +1,63 @@
+#:kivy 1.9.1
+
+<MainWindow>:
+    label: board 
+    label: input 
+
+    canvas: 
+
+    FloatLayout: 
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "data/background.png"
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: .9,.9
+            pos_hint: { "center_x":.5, "center_y": .5}
+
+            Label:
+                text:"Integer Linear Program Sudoku Solver"
+                size_hint_y: .1 
+                font_size: dp(25)
+                background_color:  0,0,0,1
+            Label:
+                text: "Instructions: Fill out the 9x9 Sudoku board bellow or import a txt file of your board in the same directory as the solver."
+                size_hint_y: .1
+            Label:
+                size_hint_y: .1
+
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint_y: .1
+                size_hint_x: .5
+                pos_hint: {"center_x":.5, "center_y":.5 }
+                
+
+                TextInput: 
+                    hint_text: "Import a .txt file"
+                    id: input 
+                Button:
+                    text: "Import"
+                    on_release: root.inputButton()
+                    
+            Label:
+                size_hint_y:.05
+            GridLayout:
+                cols: 9
+                rows: 9 
+                id: board 
+                padding: .1,.1,.1,.1
+            
+
+            BoxLayout:
+                orientation: "horizontal"
+                size_hint_y: .1
+
+                Button:
+                    text: "Solve"
+                    on_release: root.solveButton()
+                Button:
+                    text: "Clear"
+                    on_release: root.clearButton()

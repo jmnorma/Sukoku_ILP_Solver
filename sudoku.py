@@ -97,7 +97,7 @@ class SudokuSolver:
                 for v in self.values:
                     if pulp.value(self.parameter[v][r][c])== 1:
                          row += [v]
-            output += row 
+            output.append(row)
             print(row)
         
         return output
@@ -126,7 +126,7 @@ def textFileParse( fileName ):
 def main(): 
     ## Create a 2D List of integers 
     ## Blanks are filed with Zeros 
-    board = textFileParse("puzzles/puzzle6(medium).txt")
+    board = textFileParse("puzzles/puzzle1.txt")
 
     SS = SudokuSolver()
     SS.addBoard(board)
