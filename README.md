@@ -64,7 +64,7 @@ ___
 ## GUI Usages
    **Requires both Kivy and PuLp** 
 
-- **Start Application
+- **Start Application**
     -  Run using the following command
       
       python sudokuUI.py 

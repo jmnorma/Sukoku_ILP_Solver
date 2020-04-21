@@ -59,6 +59,8 @@ class MainWindow(Screen):
                 textInput.background_color = [1,1,1,1]
 
     def inputButton(self):
+        self.clearButton()
+        
         if(self.ids['input'].text != ''):
             self.ids['input'].background_color = [1,1,1,1]
             inputfile = self.ids['input'].text
