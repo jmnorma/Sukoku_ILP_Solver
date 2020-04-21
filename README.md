@@ -82,4 +82,4 @@ ___
     - Click the solve button for a solution using the lienar program formulation 
     - If you want to test another board please press "Clear"
 
-![alt text](data/fileInputCompletion.png)
+![alt text](data/solved.png)
